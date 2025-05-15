@@ -15,7 +15,7 @@ ollama pull gemma3 && ollama run gemma3
 
 ```
 
-> I chose `Gemma3` which is a capable model from Google that can run on a single GPU or TPU. It's multimodal able to process both text and images, available in 1B, 4B, 12B, and 27B parameter sizes. It excels at tasks like **summarization**, question answering, content creation, reasoning, translation, and visual understanding.
+> I chose `Gemma3` which is a capable model from Google that can run on a single GPU or TPU. It's multimodal, able to process both text and images, available in 1B, 4B, 12B, and 27B parameter sizes. It excels at tasks like **summarization**, question answering, content creation, reasoning, translation, and visual understanding.
 
 
 
