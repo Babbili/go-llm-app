@@ -23,7 +23,14 @@ func main() {
 	}
 
 	// Create a prompt using NewPrompt function
-	prompt := gollm.NewPrompt("summarize this blog https://opentelemetry.io/blog/2025/otel-cicd-sig/")
+	prompt := gollm.NewPrompt(
+		"summarize this blog https://opentelemetry.io/blog/2025/otel-cicd-sig/",
+		gollm.WithDirectives(
+			"Keep the summary under 300 words",
+			"Capture the main points",
+			"Focus on the solution provided",
+		),
+	)
 
 	// Generate a response
 	ctx := context.Background()
@@ -35,4 +42,3 @@ func main() {
 	fmt.Printf("Response: %s\n", response)
 
 }
-
