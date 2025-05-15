@@ -26,7 +26,7 @@ func main() {
 	prompt := gollm.NewPrompt(
 		"summarize this blog https://opentelemetry.io/blog/2025/otel-cicd-sig/",
 		gollm.WithDirectives(
-			"Keep the summary under 800 words",
+			"Keep the summary under 300 words",
 			"Capture the main points",
 			"Focus on the solution provided",
 		),
@@ -42,4 +42,3 @@ func main() {
 	fmt.Printf("Response: %s\n", response)
 
 }
-
