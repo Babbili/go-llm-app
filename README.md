@@ -5,7 +5,9 @@ This repo demonstrates how to bring Large Language Models to your Go application
 The application uses `gollm` library to create an LLM instance with Ollama as a provider, set up a prompt, and generate a response.
 
 
-Ollama is running locally and serving Google's Gemma3 model.
+## Get started
+
+Start [Ollama](https://ollama.com) locally and run Google's Gemma3 model.
 
 ```bash
 ollama serve
@@ -13,10 +15,11 @@ ollama pull gemma3 && ollama run gemma3
 
 ```
 
-> I choosed `Gemma3` which is lightweight model from Google, its a multimodal—processing text and images, Available in 1B, 4B, 12B, and 27B parameter sizes, it exceles in tasks like summarization, question answering, content creation, reasoning, translating and visual understanding. 
+> I chose `Gemma3` which is a capable model from Google that can run on a single GPU or TPU. It's multimodal able to process both text and images, available in 1B, 4B, 12B, and 27B parameter sizes. It excels at tasks like **summarization**, question answering, content creation, reasoning, translation, and visual understanding.
 
 
-create an LLM with Ollama provider
+
+Create an LLM instance with Ollama provider
 
 `gollm` also streamlines interactions with other LLM providers such as OpenAI, Anthropic, Groq, OpenRouter, ...
 
@@ -45,7 +48,7 @@ func main() {
 ...
 ```
 
-create a prompt with directives
+Create a prompt with directives
 ```go
 	// Create a prompt using NewPrompt function
 	prompt := gollm.NewPrompt(
@@ -58,7 +61,7 @@ create a prompt with directives
 	)
 ```
 
-generate response
+Generate response
 ```go
 	// Generate a response
 	ctx := context.Background()
