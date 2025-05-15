@@ -2,7 +2,7 @@
 
 This repo demonstrates how to bring Large Language Models to your Go applications and add AI capabilities to Golang which has great scaling capability, impressive performance and concurrency support.
 
-The application uses `gollm` library to create an LLM instance with Ollama as a provider, set up a prompt, and generate a response.
+The application uses [gollm](github.com/teilomillet/gollm) library to create an LLM instance with Ollama as a provider, set up a prompt, and generate a response.
 
 
 ## Get started
