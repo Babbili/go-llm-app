@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/teilomillet/gollm"
 )
@@ -13,7 +14,9 @@ func main() {
 	llm, err := gollm.NewLLM(
 		gollm.SetProvider("ollama"),
 		gollm.SetModel("gemma3"),
+		gollm.SetTimeout(100*time.Second),
 		gollm.SetLogLevel(gollm.LogLevelInfo),
+		gollm.SetOllamaEndpoint("http://127.0.0.1:11434"),
 	)
 	if err != nil {
 		log.Fatalf("Failed to create LLM: %v", err)
